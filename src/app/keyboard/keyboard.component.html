@@ -1,0 +1,16 @@
+<div id="keyboard">
+	<div id='digits'>
+		<div *ngFor="let key of this.digits" class='key digit'>
+			<p class='innerkey' (click)='pushKey(key)'>
+				<span>{{key.view}}</span>
+			</p>
+		</div>
+	</div>
+	<div id="operators">
+		<div *ngFor="let key of this.operators" class='key operator'>
+			<p class='innerkey' (click)='pushKey(key)'>
+				<span>{{key.view}}</span>
+			</p>
+		</div>
+	</div>
+</div>

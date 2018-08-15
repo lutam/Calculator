@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+
+import {ActionsService } from '../services/actions.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+	constructor(private actions: ActionsService){}
+
+
+	@HostListener('document:keydown', ['$event']) openEars(event: KeyboardEvent) { 
+    	this.actions.hear(event.key);
+
+  	}
+
 }
+

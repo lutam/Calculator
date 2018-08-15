@@ -1,0 +1,23 @@
+#display {
+  width: 90%;
+  display: inline-block;
+  height: 20%;
+  background-color: #81ecec;
+  position: relative;
+  margin-top: 2%;
+  margin-left: 5%;
+  padding: 2% 5%;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+#display span {
+  font-size: 25px; }
+
+#display p {
+  font-size: 35px;
+  text-align: right;
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  bottom: 12%;
+  right: 5%; }

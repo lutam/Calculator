@@ -1,0 +1,76 @@
+#keyboard{ width: 90%;
+
+margin-left: 5%;
+
+
+background: #dedede;
+
+margin-top: 2%;
+
+
+ height: percentage(1-0.26);   }
+
+#digits{ float:left; width:percentage(1*3/5); height: 100%; }
+#operators{ float:left; width:percentage(1*2/5-0.02); margin-left:2%; height: 100%; }
+
+$key_vertical_spacing:5;
+$key_horizontal_spacing:2;
+
+.key{overflow:hidden; height:25%; float:left;  }
+.innerkey{ height:percentage(1-  3*$key_vertical_spacing/400); width:100%; background:#34495e; text-align:center; color:white; display:table; font-size:45px; font-weight:bold; font-family:sans-serif; cursor:pointer; box-sizing:border-box;   }
+.innerkey:hover{ background-color: #16a085; }
+
+/* JUST FOR DIGITS*/
+
+.key.digit{  width: percentage((1-($key_horizontal_spacing/100)*2)/3); margin-left:percentage($key_horizontal_spacing/200); margin-right:percentage($key_horizontal_spacing/200);}
+.key.digit:nth-child(1), .key.digit:nth-child(4), .key.digit:nth-child(7), .key.digit:nth-child(10){ margin-left:0; }
+.key.digit:nth-child(3), .key.digit:nth-child(6), .key.digit:nth-child(9), .key.digit:nth-child(11){ margin-right:0; }
+.key.digit:nth-child(10){ width:percentage(2*((1-($key_horizontal_spacing/100)*2)/3)+$key_horizontal_spacing/100); }
+
+
+
+.key.digit:nth-child(1) .innerkey, .key.digit:nth-child(2) .innerkey, .key.digit:nth-child(3) .innerkey{
+	margin-top: 0; margin-bottom: percentage( $key_vertical_spacing*3/400); 
+} 
+.key.digit:nth-child(4) .innerkey, .key.digit:nth-child(5) .innerkey, .key.digit:nth-child(6) .innerkey{
+	margin-top: percentage($key_vertical_spacing/400);  margin-bottom: percentage( $key_vertical_spacing/200); 
+}
+.key.digit:nth-child(7) .innerkey, .key.digit:nth-child(8) .innerkey, .key.digit:nth-child(9) .innerkey{
+	margin-top: percentage($key_vertical_spacing/200);  margin-bottom: percentage( $key_vertical_spacing/400); 
+}
+.key.digit:nth-child(10) .innerkey{
+	margin-bottom: 0; margin-top: percentage( ( ($key_vertical_spacing*3/400) * ((1-($key_horizontal_spacing/100)*2)/3) )/(2*((1-($key_horizontal_spacing/100)*2)/3)+$key_horizontal_spacing/100)  ); 
+}
+.key.digit:nth-child(11) .innerkey{
+	margin-bottom: 0; margin-top: percentage( $key_vertical_spacing*3/400); 
+} 
+
+
+
+.key.operator{ overflow:hidden; width: percentage((1-($key_horizontal_spacing/100))/2); height:25%; float:left;  margin-left:0; margin-right:percentage($key_horizontal_spacing/100);}
+.key.operator:nth-child(2), .key.operator:nth-child(4), .key.operator:nth-child(6), .key.operator:nth-child(8){ margin-right:0; }
+
+.key.operator:nth-child(1) .innerkey, .key.operator:nth-child(2) .innerkey{ background-color: #95a5a6;}
+.key.operator:nth-child(1) .innerkey:hover, .key.operator:nth-child(2) .innerkey:hover{ background-color: #7f8c8d;}
+
+.key.operator:nth-child(8) .innerkey{ background-color: #e74c3c; }
+.key.operator:nth-child(8) .innerkey:hover{ background-color: #c0392b; }
+
+
+.key.operator:nth-child(1) .innerkey, .key.operator:nth-child(2) .innerkey, {
+	margin-top: 0; margin-bottom: percentage( $key_vertical_spacing*3/400); 
+} 
+.key.operator:nth-child(3) .innerkey, .key.operator:nth-child(4) .innerkey{
+	margin-top: percentage($key_vertical_spacing/400);  margin-bottom: percentage( $key_vertical_spacing/200); 
+}
+.key.operator:nth-child(5) .innerkey, .key.operator:nth-child(6) .innerkey{
+	margin-top: percentage($key_vertical_spacing/200);  margin-bottom: percentage( $key_vertical_spacing/400); 
+}
+.key.operator:nth-child(7) .innerkey, .key.operator:nth-child(8) .innerkey{
+	margin-bottom: 0; margin-top: percentage( $key_vertical_spacing*3/400); 
+} 
+
+
+.innerkey span{  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
